@@ -5,5 +5,18 @@ Minecraft-items-and-blocks-CSS
 
 Имеется поддержка модов: IndustrialCraft, BuildCraft и Forestry.
 
+#Применение
+```html
+<span class="item item_ID_DATA"></span>
+```
+или
+```html
+<span class="item item_ID"></span>
+```
+либо
+```html
+<span class="item item_ID item_ID_DATA"></span>
+```
+
 #Демо
 ![](http://i.imgur.com/WIN71B1.png)
