@@ -2,8 +2,8 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>Minecraft items and blocks CSS example</title>
-  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" />
+  <title>Minecraft предметы и блоки</title>
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
   <link rel="stylesheet" href="blocks_items.css" />
   <link rel="stylesheet" href="blocks_items_ic.css" />
   <link rel="stylesheet" href="blocks_items_ic_exp.css" />
@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="blocks_items_forestry.css" />
   <link rel="stylesheet" href="blocks_items_compactwindmills.css" />
   <link rel="stylesheet" href="blocks_items_iron_chest.css" />
+  <link rel="stylesheet" href="blocks_items_nuclear_control.css" />
   <style>
     #body {
       padding-top: 20px;
@@ -29,47 +30,74 @@
 
 <div id="body" class="container">
 
-<h1>Minecraft items and blocks CSS example</h1>
+<h1>Minecraft предметы и блоки</h1>
 
-<p>File structure</p>
-<pre>block_items.png
-block_items.css
+<h2>Подключение</h2>
 
-block_items_ic.png [optional]
-block_items_ic.css [optional]
+<p>Скачать файлы c расширением .css и .png нужных вам модов.<br/>
+Подключить .css файл к html странице подобным образом:
+<pre>&#60;link rel="stylesheet" href="blocks_items.css" /&#62;</pre></p>
 
-block_items_ic_exp.png [optional]
-block_items_ic_exp.css [optional]
+<h2>Использование</h2>
 
-block_items_bc.png [optional]
-block_items_bc.css [optional]
+<p>В любом месте тега body прописать
+<pre>&#60;span class="item item_<abbr title="ID предмета - #264">264</abbr>"&#62;&#60;/span&#62;</pre>
+либо
+<pre>&#60;span class="item item_<abbr title="ID:DATA предмета - #5:1">5_1</abbr>"&#62;&#60;/span&#62;</pre></p>
 
-block_items_forestry.png [optional]
-block_items_forestry.css [optional]
+<p>Также полезно использовать связку <code>&#60;span class="item item_ID item_ID_DATA"&#62;&#60;/span&#62;</code>, т.к. один и тот же предмет в логах может принимать разные параметры DATA.<br/>
+В случае отсутствия предмета с такими ID и DATA будет загружена иконка для предмета с соответствующим ID.</p>
 
-block_items_compactwindmills.png [optional]
-block_items_compactwindmills.css [optional]
+<h2>Nuclear Control</h2>
 
-block_items_iron_chest.png [optional]
-block_items_iron_chest.css [optional]</pre>
+<h3>Файлы</h3>
+<pre>block_items_nuclear_control.png
+block_items_nuclear_control.css</pre>
 
-<p>Head</p>
-<pre>&#60;link rel="stylesheet" href="blocks_items.css" /&#62;
-optional headers:
-&#60;link rel="stylesheet" href="blocks_items_ic.css" /&#62;
-&#60;link rel="stylesheet" href="blocks_items_ic_exp.css" /&#62;
-&#60;link rel="stylesheet" href="blocks_items_bc.css" /&#62;
-&#60;link rel="stylesheet" href="blocks_items_forestry.css" /&#62;
-&#60;link rel="stylesheet" href="blocks_items_compactwindmills.css" /&#62;
-&#60;link rel="stylesheet" href="blocks_items_iron_chest.css" /&#62;</pre>
+<h3>Тег head</h3>
+<pre>&#60;link rel="stylesheet" href="blocks_items_nuclear_control.css" /&#62;</pre>
 
-<p>Body</p>
-<pre>&#60;span class="item item_<abbr title="Item/block ID #264">264</abbr>"&#62;&#60;/span&#62;
-or
-&#60;span class="item item_<abbr title="Item/block ID:DATA #5:1">5_1</abbr>"&#62;&#60;/span&#62;</pre>
+<h3>Список id</h3>
+<div>
+<span class="item item_4095" title="#4095"></span>
+<span class="item item_4095_1" title="#4095:1"></span>
+<span class="item item_4095_2" title="#4095:2"></span>
+<span class="item item_4095_3" title="#4095:3"></span>
+<span class="item item_4095_4" title="#4095:4"></span>
+<span class="item item_4095_5" title="#4095:5"></span>
+<span class="item item_4095_6" title="#4095:6"></span>
+<span class="item item_4095_7" title="#4095:7"></span>
+<span class="item item_4095_8" title="#4095:8"></span>
+<span class="item item_4095_9" title="#4095:9"></span>
+<span class="item item_4095_10" title="#4095:10"></span>
+<span class="item item_31256" title="#31256"></span>
+<span class="item item_31257" title="#31257"></span>
+<span class="item item_31258" title="#31258"></span>
+<span class="item item_31259" title="#31259"></span>
+<span class="item item_31260" title="#31260"></span>
+<span class="item item_31260_1" title="#31260:1"></span>
+<span class="item item_31260_2" title="#31260:2"></span>
+<span class="item item_31261" title="#31261"></span>
+<span class="item item_31262" title="#31262"></span>
+<span class="item item_31263" title="#31263"></span>
+<span class="item item_31264" title="#31264"></span>
+<span class="item item_31265" title="#31265"></span>
+<span class="item item_31265_1" title="#31265:1"></span>
+<span class="item item_31266" title="#31266"></span>
+<span class="item item_31266_1" title="#31266:1"></span>
+<span class="item item_31267" title="#31267"></span>
+</div>
 
 <h2>IndustrialCraft 2 Experimental</h2>
 
+<h3>Файлы</h3>
+<pre>block_items_ic_exp.png
+block_items_ic_exp.css</pre>
+
+<h3>Тег head</h3>
+<pre>&#60;link rel="stylesheet" href="blocks_items_ic_exp.css" /&#62;</pre>
+
+<h3>Список id</h3>
 <div>
 <span class="item item_4000" title="#4000"></span>
 <span class="item item_4001" title="#4001"></span>
@@ -442,6 +470,14 @@ or
 
 <h2>Minecraft (1.6.4)</h2>
 
+<h3>Файлы</h3>
+<pre>block_items.png
+block_items.css</pre>
+
+<h3>Тег head</h3>
+<pre>&#60;link rel="stylesheet" href="blocks_items.css" /&#62;</pre>
+
+<h3>Список id</h3>
 <div>
 <span class="item item_1" title="#1"></span>
 <span class="item item_2" title="#2"></span>
@@ -921,6 +957,14 @@ or
 
 <h2>IndustrialCraft 2</h2>
 
+<h3>Файлы</h3>
+<pre>block_items_ic.png
+block_items_ic.css</pre>
+
+<h3>Тег head</h3>
+<pre>&#60;link rel="stylesheet" href="blocks_items_ic.css" /&#62;</pre>
+
+<h3>Список id</h3>
 <div>
 <span class="item item_216" title="#216"></span>
 <span class="item item_217" title="#217"></span>
@@ -1192,6 +1236,14 @@ or
 
 <h2>BuildCraft</h2>
 
+<h3>Файлы</h3>
+<pre>block_items_bc.png
+block_items_nuclear_bc.css</pre>
+
+<h3>Тег head</h3>
+<pre>&#60;link rel="stylesheet" href="blocks_items_bc.css" /&#62;</pre>
+
+<h3>Список id</h3>
 <div>
 <span class="item item_1500" title="#1500"></span>
 <span class="item item_1501" title="#1501"></span>
@@ -1288,6 +1340,14 @@ or
 
 <h2>Forestry</h2>
 
+<h3>Файлы</h3>
+<pre>block_items_forestry.png
+block_items_forestry.css</pre>
+
+<h3>Тег head</h3>
+<pre>&#60;link rel="stylesheet" href="blocks_items_forestry.css" /&#62;</pre>
+
+<h3>Список id</h3>
 <div>
 <span class="item item_1376" title="#1376"></span>
 <span class="item item_1377" title="#1377"></span>
@@ -1713,6 +1773,15 @@ or
 </div>
 
 <h2>CompactWindmills</h2>
+
+<h3>Файлы</h3>
+<pre>block_items_compactwindmills.png
+block_items_compactwindmills.css</pre>
+
+<h3>Тег head</h3>
+<pre>&#60;link rel="stylesheet" href="blocks_items_compactwindmills.css" /&#62;</pre>
+
+<h3>Список id</h3>
 <div>
 <span class="item item_2790_0" title="#2790:0"></span>
 <span class="item item_2790_1" title="#2790:1"></span>
@@ -1726,6 +1795,15 @@ or
 </div>
 
 <h2>Iron Chest</h2>
+
+<h3>Файлы</h3>
+<pre>block_items_iron_chest.png
+block_items_iron_chest.css</pre>
+
+<h3>Тег head</h3>
+<pre>&#60;link rel="stylesheet" href="blocks_items_iron_chest.css" /&#62;</pre>
+
+<h3>Список id</h3>
 <div>
 <span class="item item_975_0" title="#975:0"></span>
 <span class="item item_975_1" title="#975:1"></span>
