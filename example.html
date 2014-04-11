@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="blocks_items_compactwindmills.css" />
   <link rel="stylesheet" href="blocks_items_iron_chest.css" />
   <link rel="stylesheet" href="blocks_items_nuclear_control.css" />
+  <link rel="stylesheet" href="blocks_items_balkons_weapon.css" />
   <style>
     #body {
       padding-top: 20px;
@@ -24,6 +25,9 @@
       outline: 1px solid silver;
       background-color: #ccc;
     }
+    h1 {
+      text-align: center;
+    }
   </style>
 </head>
 <body>
@@ -35,27 +39,151 @@
 <h2>Подключение</h2>
 
 <p>Скачать файлы c расширением .css и .png нужных вам модов.<br/>
-Подключить .css файл к html странице подобным образом:
+Подключить .css файлы к html странице подобным образом:
 <pre>&#60;link rel="stylesheet" href="blocks_items.css" /&#62;</pre></p>
 
 <h2>Использование</h2>
 
-<p>В любом месте тега body прописать
-<pre>&#60;span class="item item_<abbr title="ID предмета - #264">264</abbr>"&#62;&#60;/span&#62;</pre>
-либо
-<pre>&#60;span class="item item_<abbr title="ID:DATA предмета - #5:1">5_1</abbr>"&#62;&#60;/span&#62;</pre></p>
+<p><pre>&#60;span class="item item_<abbr title="ID предмета">ID</abbr> item_<abbr title="ID предмета">ID</abbr>_<abbr title="DATA (damage) предмета">DATA</abbr>"&#62;&#60;/span&#62;</pre>
+ID - id предмета<br/>
+DATA - damage предмета</p>
 
-<p>Также полезно использовать связку <code>&#60;span class="item item_ID item_ID_DATA"&#62;&#60;/span&#62;</code>, т.к. один и тот же предмет в логах может принимать разные параметры DATA.<br/>
-В случае отсутствия предмета с такими ID и DATA будет загружена иконка для предмета с соответствующим ID.</p>
+<p>Т.к. один и тот же предмет в логах может принимать разные параметры DATA, нужно одновременно использовать и <code>item_ID</code> и <code>item_ID_DATA</code></p>
+
+<h3>Пример</h3>
+
+<pre>&#60;span class="item item_264 item_264_0"&#62;&#60;/span&#62;
+&#60;span class="item item_5 item_5_1"&#62;&#60;/span&#62;</pre>
+
+<p><span class="item item_264 item_264_0"></span>
+<span class="item item_5 item_5_1"></span></p>
+
+<p>
+  <form class="form-inline">
+    <div class="form-group">
+      <label class="control-label">ID</label>
+      <input type="text" id="item_id" class="form-control form-inline" value="264" placeholder="ID" />
+    </div>
+    <div class="form-group">
+      <label class="control-label">DATA</label>
+      <input type="text" id="item_data" class="form-control form-inline" value="0" placeholder="DATA" />
+    </div>
+    <div class="form-group">
+      <input type="button" class="btn btn-default" value="Смотреть иконку" onclick="createIcon()" />
+    </div>
+    <div class="form-group">
+      <span id="item" class="item item_264 item_264_0" title="#264:0"></span>
+    </div>
+  </form>
+  <script>
+  function createIcon() {
+    item.setAttribute("class", "item item_"+item_id.value+" item_"+item_id.value+"_"+item_data.value);
+    item.setAttribute("title", "#"+item_id.value+":"+item_data.value);
+  }
+  </script>
+</p>
+
+<hr/>
+
+<h2>Balkon's Weapon Mod</h2>
+
+<div class="row">
+  <div class="col-md-6">
+    <h3>Файлы</h3>
+    <pre>block_items_balkons_weapon.png
+block_items_balkons_weapon.css</pre>
+  </div>
+  <div class="col-md-6">
+    <h3>Тег head</h3>
+    <pre>&#60;link rel="stylesheet" href="blocks_items_balkons_weapon.css" /&#62;</pre>
+  </div>
+</div>
+
+<h3>Список id</h3>
+<div>
+<span class="item item_11776" title="#11776"></span>
+<span class="item item_11777" title="#11777"></span>
+<span class="item item_11778" title="#11778"></span>
+<span class="item item_11779" title="#11779"></span>
+<span class="item item_11780" title="#11780"></span>
+<span class="item item_11781" title="#11781"></span>
+<span class="item item_11782" title="#11782"></span>
+<span class="item item_11783" title="#11783"></span>
+<span class="item item_11784" title="#11784"></span>
+<span class="item item_11785" title="#11785"></span>
+<span class="item item_11786" title="#11786"></span>
+<span class="item item_11787" title="#11787"></span>
+<span class="item item_11788" title="#11788"></span>
+<span class="item item_11789" title="#11789"></span>
+<span class="item item_11790" title="#11790"></span>
+<span class="item item_11791" title="#11791"></span>
+<span class="item item_11792" title="#11792"></span>
+<span class="item item_11793" title="#11793"></span>
+<span class="item item_11794" title="#11794"></span>
+<span class="item item_11795" title="#11795"></span>
+<span class="item item_11796" title="#11796"></span>
+<span class="item item_11797" title="#11797"></span>
+<span class="item item_11798" title="#11798"></span>
+<span class="item item_11799" title="#11799"></span>
+<span class="item item_11800" title="#11800"></span>
+<span class="item item_11801" title="#11801"></span>
+<span class="item item_11802" title="#11802"></span>
+<span class="item item_11803" title="#11803"></span>
+<span class="item item_11804" title="#11804"></span>
+<span class="item item_11805" title="#11805"></span>
+<span class="item item_11806" title="#11806"></span>
+<span class="item item_11807" title="#11807"></span>
+<span class="item item_11809" title="#11809"></span>
+<span class="item item_11810" title="#11810"></span>
+<span class="item item_11811" title="#11811"></span>
+<span class="item item_11812" title="#11812"></span>
+<span class="item item_11813" title="#11813"></span>
+<span class="item item_11814_0" title="#11814:0"></span>
+<span class="item item_11814_1" title="#11814:1"></span>
+<span class="item item_11814_2" title="#11814:2"></span>
+<span class="item item_11814_3" title="#11814:3"></span>
+<span class="item item_11815" title="#11815"></span>
+<span class="item item_11816" title="#11816"></span>
+<span class="item item_11817" title="#11817"></span>
+<span class="item item_11818" title="#11818"></span>
+<span class="item item_11819" title="#11819"></span>
+<span class="item item_11820" title="#11820"></span>
+<span class="item item_11821" title="#11821"></span>
+<span class="item item_11822" title="#11822"></span>
+<span class="item item_11823" title="#11823"></span>
+<span class="item item_11824" title="#11824"></span>
+<span class="item item_11825" title="#11825"></span>
+<span class="item item_11826" title="#11826"></span>
+<span class="item item_11827" title="#11827"></span>
+<span class="item item_11828" title="#11828"></span>
+<span class="item item_11829" title="#11829"></span>
+<span class="item item_11830" title="#11830"></span>
+<span class="item item_11831" title="#11831"></span>
+<span class="item item_11832" title="#11832"></span>
+<span class="item item_11833" title="#11833"></span>
+<span class="item item_11834" title="#11834"></span>
+<span class="item item_11835" title="#11835"></span>
+<span class="item item_11836" title="#11836"></span>
+<span class="item item_11837" title="#11837"></span>
+<span class="item item_11838" title="#11838"></span>
+<span class="item item_11839" title="#11839"></span>
+</div>
+
+<hr/>
 
 <h2>Nuclear Control</h2>
 
-<h3>Файлы</h3>
-<pre>block_items_nuclear_control.png
+<div class="row">
+  <div class="col-md-6">
+    <h3>Файлы</h3>
+    <pre>block_items_nuclear_control.png
 block_items_nuclear_control.css</pre>
-
-<h3>Тег head</h3>
-<pre>&#60;link rel="stylesheet" href="blocks_items_nuclear_control.css" /&#62;</pre>
+  </div>
+  <div class="col-md-6">
+    <h3>Тег head</h3>
+    <pre>&#60;link rel="stylesheet" href="blocks_items_nuclear_control.css" /&#62;</pre>
+  </div>
+</div>
 
 <h3>Список id</h3>
 <div>
@@ -88,14 +216,21 @@ block_items_nuclear_control.css</pre>
 <span class="item item_31267" title="#31267"></span>
 </div>
 
+<hr/>
+
 <h2>IndustrialCraft 2 Experimental</h2>
 
-<h3>Файлы</h3>
-<pre>block_items_ic_exp.png
+<div class="row">
+  <div class="col-md-6">
+    <h3>Файлы</h3>
+    <pre>block_items_ic_exp.png
 block_items_ic_exp.css</pre>
-
-<h3>Тег head</h3>
-<pre>&#60;link rel="stylesheet" href="blocks_items_ic_exp.css" /&#62;</pre>
+  </div>
+  <div class="col-md-6">
+    <h3>Тег head</h3>
+    <pre>&#60;link rel="stylesheet" href="blocks_items_ic_exp.css" /&#62;</pre>
+  </div>
+</div>
 
 <h3>Список id</h3>
 <div>
@@ -468,15 +603,22 @@ block_items_ic_exp.css</pre>
 <span class="item item_30244" title="#30244"></span>
 </div>
 
+<hr/>
+
 <h2>Minecraft (1.7.5)</h2>
 
-<h3>Файлы</h3>
-<pre>block_items.png
+<div class="row">
+  <div class="col-md-6">
+    <h3>Файлы</h3>
+    <pre>block_items.png
 block_items_potions.png
 block_items.css</pre>
-
-<h3>Тег head</h3>
-<pre>&#60;link rel="stylesheet" href="blocks_items.css" /&#62;</pre>
+  </div>
+  <div class="col-md-6">
+    <h3>Тег head</h3>
+    <pre>&#60;link rel="stylesheet" href="blocks_items.css" /&#62;</pre>
+  </div>
+</div>
 
 <h3>Список id</h3>
 <div>
@@ -1014,14 +1156,21 @@ block_items.css</pre>
 <span class="item item_373_16462" title="#373:16462"></span>
 </div>
 
+<hr/>
+
 <h2>IndustrialCraft 2</h2>
 
-<h3>Файлы</h3>
-<pre>block_items_ic.png
+<div class="row">
+  <div class="col-md-6">
+    <h3>Файлы</h3>
+    <pre>block_items_ic.png
 block_items_ic.css</pre>
-
-<h3>Тег head</h3>
-<pre>&#60;link rel="stylesheet" href="blocks_items_ic.css" /&#62;</pre>
+  </div>
+  <div class="col-md-6">
+    <h3>Тег head</h3>
+    <pre>&#60;link rel="stylesheet" href="blocks_items_ic.css" /&#62;</pre>
+  </div>
+</div>
 
 <h3>Список id</h3>
 <div>
@@ -1293,14 +1442,21 @@ block_items_ic.css</pre>
 <span class="item item_30256" title="#30256"></span>
 </div>
 
+<hr/>
+
 <h2>BuildCraft</h2>
 
-<h3>Файлы</h3>
-<pre>block_items_bc.png
+<div class="row">
+  <div class="col-md-6">
+    <h3>Файлы</h3>
+    <pre>block_items_bc.png
 block_items_nuclear_bc.css</pre>
-
-<h3>Тег head</h3>
-<pre>&#60;link rel="stylesheet" href="blocks_items_bc.css" /&#62;</pre>
+  </div>
+  <div class="col-md-6">
+    <h3>Тег head</h3>
+    <pre>&#60;link rel="stylesheet" href="blocks_items_bc.css" /&#62;</pre>
+  </div>
+</div>
 
 <h3>Список id</h3>
 <div>
@@ -1397,14 +1553,21 @@ block_items_nuclear_bc.css</pre>
 <span class="item item_19480" title="#19480"></span>
 </div>
 
+<hr/>
+
 <h2>Forestry</h2>
 
-<h3>Файлы</h3>
-<pre>block_items_forestry.png
+<div class="row">
+  <div class="col-md-6">
+    <h3>Файлы</h3>
+    <pre>block_items_forestry.png
 block_items_forestry.css</pre>
-
-<h3>Тег head</h3>
-<pre>&#60;link rel="stylesheet" href="blocks_items_forestry.css" /&#62;</pre>
+  </div>
+  <div class="col-md-6">
+    <h3>Тег head</h3>
+    <pre>&#60;link rel="stylesheet" href="blocks_items_forestry.css" /&#62;</pre>
+  </div>
+</div>
 
 <h3>Список id</h3>
 <div>
@@ -1831,14 +1994,21 @@ block_items_forestry.css</pre>
 <span class="item item_14256" title="#14256"></span>
 </div>
 
+<hr/>
+
 <h2>CompactWindmills</h2>
 
-<h3>Файлы</h3>
-<pre>block_items_compactwindmills.png
+<div class="row">
+  <div class="col-md-6">
+    <h3>Файлы</h3>
+    <pre>block_items_compactwindmills.png
 block_items_compactwindmills.css</pre>
-
-<h3>Тег head</h3>
-<pre>&#60;link rel="stylesheet" href="blocks_items_compactwindmills.css" /&#62;</pre>
+  </div>
+  <div class="col-md-6">
+    <h3>Тег head</h3>
+    <pre>&#60;link rel="stylesheet" href="blocks_items_compactwindmills.css" /&#62;</pre>
+  </div>
+</div>
 
 <h3>Список id</h3>
 <div>
@@ -1853,14 +2023,21 @@ block_items_compactwindmills.css</pre>
 <span class="item item_27903" title="#27903"></span>
 </div>
 
+<hr/>
+
 <h2>Iron Chest</h2>
 
-<h3>Файлы</h3>
-<pre>block_items_iron_chest.png
+<div class="row">
+  <div class="col-md-6">
+    <h3>Файлы</h3>
+    <pre>block_items_iron_chest.png
 block_items_iron_chest.css</pre>
-
-<h3>Тег head</h3>
-<pre>&#60;link rel="stylesheet" href="blocks_items_iron_chest.css" /&#62;</pre>
+  </div>
+  <div class="col-md-6">
+    <h3>Тег head</h3>
+    <pre>&#60;link rel="stylesheet" href="blocks_items_iron_chest.css" /&#62;</pre>
+  </div>
+</div>
 
 <h3>Список id</h3>
 <div>
@@ -1871,6 +2048,7 @@ block_items_iron_chest.css</pre>
 <span class="item item_975_4" title="#975:4"></span>
 <span class="item item_975_5" title="#975:5"></span>
 <span class="item item_975_6" title="#975:6"></span>
+<span class="item item_975_7" title="#975:7"></span>
 <span class="item item_19757" title="#19757"></span>
 <span class="item item_19758" title="#19758"></span>
 <span class="item item_19759" title="#19759"></span>

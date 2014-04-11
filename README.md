@@ -1,22 +1,31 @@
-Minecraft-items-and-blocks-CSS
-====================
+#Minecraft предметы и блоки
 
-Каскадная таблица стилей для сайтов. Отображение иконок предметов и блоков в размере 32x32 пикселей.
+##Подключение
 
-Имеется поддержка модов: IndustrialCraft 2, IndustrialCraft 2 Experimental, BuildCraft, Forestry, Iron Chest, CompactWindmills и Nuclear Control.
+Скачать файлы c расширением .css и .png нужных вам модов.
+Подключить .css файлы к html странице подобным образом:
 
-#Применение
 ```html
-<span class="item item_ID_DATA"></span>
+<link rel="stylesheet" href="blocks_items.css" />
 ```
-или
-```html
-<span class="item item_ID"></span>
-```
-либо
+
+##Использование
+
 ```html
 <span class="item item_ID item_ID_DATA"></span>
 ```
 
-#Демо
-![](http://i.imgur.com/WIN71B1.png)
+ID - id предмета
+
+DATA - damage предмета
+
+Т.к. один и тот же предмет в логах может принимать разные параметры DATA, нужно одновременно использовать и ```item_ID``` и ```item_ID_DATA```
+
+###Пример
+
+```html
+<span class="item item_264 item_264_0"></span>
+<span class="item item_5 item_5_1"></span>
+```
+
+![иконки алмаза и досок](http://i.imgur.com/TSJnbXb.png)
